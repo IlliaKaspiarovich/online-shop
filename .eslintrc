@@ -13,6 +13,7 @@
   },
   "root": true,
   "rules": {
-    "no-console": 2
+    "no-console": "error",
+    "padding-line-between-statements": "error"
   }
 }
