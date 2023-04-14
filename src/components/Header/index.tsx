@@ -5,6 +5,7 @@ import Box from '@mui/material/Box'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import { useDispatch } from 'react-redux'
+
 import { toggleThemeMode } from 'src/store/reducers/settings'
 
 export const Header: React.FC = () => {

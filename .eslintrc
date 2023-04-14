@@ -24,6 +24,13 @@
   "root": true,
   "rules": {
     "no-console": "error",
-    "padding-line-between-statements": "error"
+    "padding-line-between-statements": "error",
+    "import/order": [
+      "error",
+      {
+        "groups": [["builtin", "external"]],
+        "newlines-between": "always"
+      }
+    ]
   }
 }

@@ -30,7 +30,8 @@
     "lint": "npx eslint ./src",
     "format": "npx prettier --write .",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "husky install"
   },
   "browserslist": {
     "production": [
@@ -51,7 +52,7 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-import-resolver-typescript": "^3.5.5",
     "eslint-plugin-import": "^2.27.5",
-    "husky": "^8.0.3",
-    "prettier": "2.8.7"
+    "prettier": "2.8.7",
+    "husky": "^8.0.0"
   }
 }
