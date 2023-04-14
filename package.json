@@ -28,7 +28,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "lint": "npx eslint ./src",
-    "format": "npx prettier --write ./src",
+    "format": "npx prettier --write .",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -49,6 +49,8 @@
     "@typescript-eslint/parser": "^5.58.0",
     "eslint": "^8.38.0",
     "eslint-config-prettier": "^8.8.0",
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-plugin-import": "^2.27.5",
     "husky": "^8.0.3",
     "prettier": "2.8.7"
   }
