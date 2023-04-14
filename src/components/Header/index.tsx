@@ -1,17 +1,25 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
-import Button from '@mui/material/Button'
 import Switch from '@mui/material/Switch'
+import AppBar from '@mui/material/AppBar'
+import Box from '@mui/material/Box'
+import Toolbar from '@mui/material/Toolbar'
+import Typography from '@mui/material/Typography'
+import { useDispatch } from 'react-redux'
 import { toggleThemeMode } from '../../store/reducers/settings'
-import styles from './index.module.css'
 
 export const Header: React.FC = () => {
   const dispatch = useDispatch()
 
   return (
-    <header className={styles.headerContainer}>
-      <Button variant="contained">Hello World</Button>
-      <Switch onChange={() => dispatch(toggleThemeMode())} />
-    </header>
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static">
+        <Toolbar>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            Logo
+          </Typography>
+          <Switch onChange={() => dispatch(toggleThemeMode())} />
+        </Toolbar>
+      </AppBar>
+    </Box>
   )
 }
