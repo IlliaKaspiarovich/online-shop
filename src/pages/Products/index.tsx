@@ -1,9 +1,12 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+import { Box, Grid } from '@mui/material'
 
 import { productsUrl } from 'src/constants'
 import { setProducts } from 'src/store/reducers/products'
 import type { RootState } from 'src/store'
+import { SideBar } from 'src/components/SideBar'
+import { ProductCard } from 'src/components/ProductCard'
 
 export const Products: React.FC = () => {
   const dispatch = useDispatch()
@@ -21,12 +24,15 @@ export const Products: React.FC = () => {
   }, [])
 
   return (
-    <ul>
-      {products.map(({ id, title, price }) => (
-        <li key={id}>
-          {title} {price}
-        </li>
-      ))}
-    </ul>
+    <Box display={'flex'}>
+      <SideBar />
+      <Grid m={2} container spacing={2}>
+        {products.map((product) => (
+          <Grid key={product.id} item xs={4}>
+            <ProductCard product={product} />
+          </Grid>
+        ))}
+      </Grid>
+    </Box>
   )
 }
